@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * DEPOT Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% spaceless %}
+    {% if input_group %}
+        <div class="input-group usa-form-group">
+    {% endif %}
+
+    {% if prefix %}
+        {{ prefix }}
+    {% endif %}
+
+    {% block input %}
+       {% if element['#value'] is same as("Reset") %}
+          <input{{ attributes.addClass('usa-button usa-button--outline') }} />
+       {% else %}
+          <input{{ attributes.addClass('usa-button') }} />
+       {% endif %}
+    {% endblock %}
+
+    {% if suffix %}
+        {{ suffix }}
+    {% endif %}
+
+    {% if input_group %}
+        </div>
+    {% endif %}
+
+    {{ children }}
+{% endspaceless %}

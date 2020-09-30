@@ -1,0 +1,44 @@
+/*
+┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━━┓
+┗┓┏┓┃ ┃┏━━┛ ┃┏━┓┃ ┃┏━┓┃ ┃┏┓┏┓┃
+ ┃┃┃┃ ┃┗━━┓ ┃┗━┛┃ ┃┃ ┃┃ ┗┛┃┃┗┛
+ ┃┃┃┃ ┃┏━━┛ ┃┏━━┛ ┃┃ ┃┃   ┃┃
+┏┛┗┛┃ ┃┗━━┓ ┃┃    ┃┗━┛┃   ┃┃
+┗━━━┛ ┗━━━┛ ┗┛    ┗━━━┛   ┗┛
+----------------------------------------
+SPACING SETTINGS
+----------------------------------------
+Read more about settings and
+USWDS spacing units tokens in the
+documentation:
+https://designsystem.digital.gov/design-tokens/spacing-units
+----------------------------------------
+*/
+
+
+/*
+----------------------------------------
+Grid container max-width
+----------------------------------------
+mobile
+mobile-lg
+tablet
+tablet-lg
+desktop
+desktop-lg
+widescreen
+----------------------------------------
+*/
+
+$theme-grid-container-max-width: "widescreen";
+
+/*
+----------------------------------------
+Site
+----------------------------------------
+*/
+
+$theme-site-max-width: "widescreen";
+$theme-site-margins-breakpoint: "widescreen";
+$theme-site-margins-width: 4;
+$theme-site-margins-mobile-width: 2;

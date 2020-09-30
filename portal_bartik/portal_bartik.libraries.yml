@@ -1,0 +1,7 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      css/custom.css: {}
+      css/dam-media-image.css: {}
+      css/dam-media-search.css: {}

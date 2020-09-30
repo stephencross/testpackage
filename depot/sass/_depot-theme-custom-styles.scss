@@ -1,0 +1,351 @@
+/*
+┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━━┓
+┗┓┏┓┃ ┃┏━━┛ ┃┏━┓┃ ┃┏━┓┃ ┃┏┓┏┓┃
+ ┃┃┃┃ ┃┗━━┓ ┃┗━┛┃ ┃┃ ┃┃ ┗┛┃┃┗┛
+ ┃┃┃┃ ┃┏━━┛ ┃┏━━┛ ┃┃ ┃┃   ┃┃
+┏┛┗┛┃ ┃┗━━┓ ┃┃    ┃┗━┛┃   ┃┃
+┗━━━┛ ┗━━━┛ ┗┛    ┗━━━┛   ┗┛
+----------------------------------------
+DEPOT THEME CUSTOM STYLES
+----------------------------------------
+This is a copy of
+_uswds-theme-custom-styles.scss
+----------------------------------------
+Custom project SASS goes here.
+
+i.e.
+@include u-padding-right('05');
+----------------------------------------
+*/
+body{
+  @include typeset('ui');
+}
+
+img {@include u-height('auto')}
+
+.grid-container {
+ max-width: units('widescreen');
+}
+
+
+.download-options-list{
+@include u-margin-top(0);
+}
+
+
+// Header height on tablets
+.usa-navbar{
+  height: 128px;
+}
+
+
+//Left sidebar
+.layout-sidebar-first .block {
+  @include u-border (1px, 'gray-cool-30', 'solid');
+  @include u-margin-bottom(2);
+  margin-block-start: 0;
+  line-height: 0;
+}
+
+#searchForm h2{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#searchForm .usa-label{
+  margin-top: 0.5em;
+}
+
+#edit-search-api-fulltext--description{
+   margin-top: 0.25em;
+}
+
+
+.layout-sidebar-first .usa-input {
+  @include u-border (1px, 'gray-cool-30', 'solid');
+  @include u-text('gray-cool-70');
+  width: 97%;
+}
+
+.layout-sidebar-first select {
+  @include u-border (1px, 'gray-cool-30', 'solid');
+  @include u-bg ('gray-warm-1');
+  width: 97%;
+}
+
+.layout-sidebar-first .block-go-back {
+  background-color: #fff;
+  border: none;
+}
+
+.layout-sidebar-first .block-go-back a:link{
+ @include u-text('gray-warm-1', no-underline);
+}
+
+
+// Recently Viewed
+#block-views-block-recent-block-1-2{
+  .depot-grid-row{
+    @include grid-gap(2);
+    @include u-margin-bottom(1);
+  }
+
+  .views-view-grid{
+    @include u-padding-left (1px);
+    @include u-padding-right (1px);
+  }
+}
+
+div .recentLabelBlock {
+  @include u-margin-bottom(2);//1em
+  @include u-bg ('base-lighter');
+  @include u-height(6);
+  @include u-padding-left(1px);
+  overflow-y:hidden;
+}
+
+.recentLabelBlock h4{
+  @include u-padding-left(1);//0.5em;
+  @include u-text('normal');
+}
+
+
+// Page content
+.usa-form .usa-input {
+  @include u-border (1px, 'gray-cool-30', 'solid');
+}
+
+.views-view-grid .views-col a:link, a:active{
+ @include u-text('no-underline');
+}
+
+.usa-form .usa-button {
+  @include u-margin-bottom(3);
+}
+
+.usa-social-link--instagram {
+  @include add-background-svg("social-icons/instagram");
+}
+
+// Desktop website Tag Title:  ATF Digital Depot and Seal
+.usa-header .usa-logo__text a{
+  font-size: 2rem !important;
+}
+
+@include at-media('tablet-lg'){
+  #depotHeader{
+    width:60%;
+  }
+}
+
+// Breakpoints
+
+// Mobile Portrait website Tag Title:  ATF Digital Depot and Seal
+@media only screen and (max-width: 420px){
+  .usa-header .usa-logo__text a{
+    font-size: 1.5rem !important;
+  }
+  #logo img {
+    max-width: 25%;
+    vertical-align: middle;
+  }
+}
+
+@include at-media('tablet'){
+  // DAM Media Image page
+  .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
+    @include u-padding(1);
+    flex: 0 1 45%;
+  }
+  #logo img {
+    vertical-align: middle;
+  }
+
+}
+
+@include at-media-max('tablet'){
+  #logo img {
+    vertical-align: middle;
+  }
+}
+
+#block-depot-content{
+  @include at-media('mobile-lg'){
+    .depot-grid-row{
+      @include grid-row;
+      @include grid-gap('md');
+      @include u-margin-bottom(3);
+    }
+    .depot-grid-col{
+      @include grid-col(3);
+    }
+   .views-view-grid{
+      @include u-padding-left (1px);
+      @include u-padding-right (1px);
+
+    }
+  }
+
+  @include at-media-max('mobile-lg'){
+    .depot-grid-row{
+      @include grid-row;
+      @include grid-gap(2);
+      @include u-margin-bottom(1);
+    }
+    .depot-grid-col{
+      @include grid-col(6);
+    }
+  }
+}
+
+
+// Recent Viewed View
+#block-views-block-recent-block-1-2 { @include at-media-max('tablet-lg'){ display: none; }}
+#block-views-block-recent-block-1 { @include at-media('desktop'){ display: none; }}
+
+#block-views-block-recent-block-1 .depot-grid-row {
+      @include grid-gap(2);
+      @include u-margin-bottom(2);
+}
+
+#block-views-block-recent-block-1 .views-view-grid {
+  padding-right: 0;
+}
+
+#block-views-block-recent-block-1 .recentLabelBlock{line-height:0;}
+#block-views-block-recent-block-1{ @include u-border (1px, 'gray-cool-30', 'solid');}
+
+#block-views-block-recent-block-1-2 .views-view-grid {
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 0;
+}
+
+#block-views-block-recent-block-1-2 .depot-grid-row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    @include u-margin-bottom(1.5);
+}
+
+
+
+#facetFilters{
+  @include u-border (1px, 'gray-cool-30', 'solid');
+  @include u-margin-bottom(2);
+  .block {
+    @include u-padding-top(1);
+    @include u-padding-left(1);
+    @include u-padding-right(1);
+    padding-bottom: 0;
+  }
+}
+
+
+#block-exposedformportal-searchpage-1{
+    @include u-padding-right(2.5);
+}
+
+
+.facets-widget-checkbox ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+}
+
+#sidebar1.usa-accordion__content{
+   @include u-padding(0.5);
+}
+
+#block-fielddivision-3.block, #block-missionareas-3.block , #block-directorate-3.block, #block-collection.block {
+  border: none;
+  @include u-margin-bottom(0.5);
+}
+
+#block-fielddivision-3 .usa-accordion__button, #block-directorate-3 .usa-accordion__button, #block-missionareas-3 .usa-accordion__button, #block-collection .usa-accordion__button{
+  @include u-bg ('base-lightest');
+}
+
+#facetFilters .usa-accordion__button{
+  @include u-text('normal');
+}
+
+#facetFilters button {
+  @include u-bg ('base-lighter');
+}
+
+.facet-summary-item--facet a{
+  text-decoration: none;
+}
+
+
+
+
+#bullets .facet-summary-item--facet {
+list-style: none;
+display: inline;
+@include u-bg ('base-lightest');
+@include u-border (1px, 'gray-cool-30', 'solid');
+@include u-padding-right(0.5);
+@include u-padding-left(0.5);
+@include u-margin-bottom(2.5);
+@include u-margin-right(1.5);
+}
+
+#bullets ul {
+padding-inline-start: 0px;
+}
+
+#bullets{
+  @include u-padding-top (3);
+}
+
+.searchPageResults{
+  float: right;
+  @include u-margin-right(2);
+}
+
+
+.xclose {
+  @include u-margin-left(1.5);
+}
+
+#views-exposed-form-portal-search-page-1 label{ @include u-margin-top(0.5);}
+
+.searchKeywords{
+  font-size: 1.5rem;
+  @include u-text('base-darkest');
+}
+
+.searchPageResults{
+  font-size: 1rem;
+  @include u-text('base');
+}
+
+.depot-section{
+  @include u-padding-top (4);
+}
+
+.usa-layout-docs__main .pager ul {display: inline-block; text-align:center;}
+.usa-layout-docs__main .pager li {display: inline-block;}
+
+.contact-message-feedback-form label{ @include u-text(900);}
+
+#block-filtersaccordioninstruction {
+  line-height: normal;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  .padding-y-1 {padding-top: 0; padding-bottom: 0;}
+}
+
+#block-filtersaccordioninstruction p {
+  display:contents;
+}
+
+#views-exposed-form-portal-search-page-1 {
+
+  //.control-label{display: none;}
+}
+#no-accordion-filters #facetFilters{display: none;}

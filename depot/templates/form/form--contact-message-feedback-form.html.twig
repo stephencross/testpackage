@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Depot theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<div>Your feedback is important to us. Fill out the form below and let us know how we can improve your Digital Depot experience.</div>
+<form{{ attributes.addClass('usa-form') }}>
+  {{ children }}
+</form>

@@ -1,0 +1,15 @@
+assets:
+  version: VERSION
+  css:
+    theme:
+      assets/css/styles.css: {}
+  js:
+    assets/js/uswds.min.js: {}
+
+uswds_custom:
+  version: VERSION
+  css:
+    theme:
+      css/prudentia.css: {}
+  js:
+    js/prudentia.js: {}

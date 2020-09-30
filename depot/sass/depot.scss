@@ -1,0 +1,31 @@
+/*
+┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━━┓
+┗┓┏┓┃ ┃┏━━┛ ┃┏━┓┃ ┃┏━┓┃ ┃┏┓┏┓┃
+ ┃┃┃┃ ┃┗━━┓ ┃┗━┛┃ ┃┃ ┃┃ ┗┛┃┃┗┛
+ ┃┃┃┃ ┃┏━━┛ ┃┏━━┛ ┃┃ ┃┃   ┃┃
+┏┛┗┛┃ ┃┗━━┓ ┃┃    ┃┗━┛┃   ┃┃
+┗━━━┛ ┗━━━┛ ┗┛    ┗━━━┛   ┗┛
+*/
+
+// Import individual theme settings
+@import "uswds-theme-general";
+@import "uswds-theme-typography";
+@import "uswds-theme-spacing";
+@import "uswds-theme-color";
+@import "uswds-theme-utilities";
+
+// Import individual Depot theme settings
+@import "depot-theme-typography";
+@import "depot-theme-spacing";
+
+
+// components import needs to be last
+@import "uswds-theme-components";
+@import "depot-theme-components";
+
+
+// Import the complete USWDS kit
+@import "uswds";
+
+// Import theme custom styles
+@import "depot-theme-custom-styles";

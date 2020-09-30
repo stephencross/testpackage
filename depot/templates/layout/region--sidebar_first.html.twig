@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Depot theme override to dsplay a region.
+ * (this overrides uswds_base/templates/layout/region--sidebar_first.html.twig file)
+ *
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ */
+#}
+{% set blocks %}
+{{elements.filtersaccordioninstruction}}
+{{elements.collection}}
+{{ elements.fielddivision_3 }}
+{{ elements.missionareas_3 }}
+{{ elements.directorate_3 }}
+{% endset %}
+
+{{elements.goback_2}}
+
+{% set facetBlocks = { block1: {content: blocks , expanded: "true" }}  %}
+
+{{elements.exposedformportal_searchpage_1}}
+
+<div id="facetFilters">
+
+{% include "@uswds/accordion/accordion.twig" with {'items': facetBlocks , 'title' : "Filters" , 'id_prefix': "sidebar"}  %}
+
+</div>
+
+{{elements.views_block__recent_block_1_2}}
+
+{{ attach_library('depot/accordion') }}

@@ -1,0 +1,22 @@
+assets:
+  version: VERSION
+  css:
+    theme:
+      assets/css/depot.css: {}
+  js:
+    assets/js/uswds.min.js: {}
+
+uswds_custom:
+  version: VERSION
+  css:
+    theme:
+      css/depot.css: {}
+  js:
+    js/depot.js: {}
+
+global-scripts:
+  version: 1.x
+  js:
+    js/accordion.js: {}
+  dependencies:
+    - core/jquery

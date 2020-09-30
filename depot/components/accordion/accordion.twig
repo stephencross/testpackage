@@ -1,0 +1,48 @@
+{#
+/*
+┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━┓ ┏━━━━┓
+┗┓┏┓┃ ┃┏━━┛ ┃┏━┓┃ ┃┏━┓┃ ┃┏┓┏┓┃
+ ┃┃┃┃ ┃┗━━┓ ┃┗━┛┃ ┃┃ ┃┃ ┗┛┃┃┗┛
+ ┃┃┃┃ ┃┏━━┛ ┃┏━━┛ ┃┃ ┃┃   ┃┃
+┏┛┗┛┃ ┃┗━━┓ ┃┃    ┃┗━┛┃   ┃┃
+┗━━━┛ ┗━━━┛ ┗┛    ┗━━━┛   ┗┛
+------------------------------------------------------------------------------
+ACCORDION COMPONENT
+------------------------------------------------------------------------------
+This component is based on the USWDS accordion.njk file.
+(node_modules/uswds/src/components/06-accordion/accordion.njk)
+
+Variables expected by this component:
+
+- variant : String - "bordered" adds borders ( default is no borders)
+- multiselectable : Boolean - Opens several tabs without closing others
+- items : Array - Populates each accordion tab
+    - item.expanded : Boolean - Sets accordion tab close/open (default 'false')
+    - item.content : Object - Accordion tab content
+- id_prefix : String - Button and DIV  ID  prefix
+- title : String - Accordion Label
+
+------------------------------------------------------------------------------
+*/
+#}
+
+<div class="usa-accordion{%
+  if variant %} usa-accordion--{{ variant }}{% endif %}"{%
+  if multiselectable == true %} aria-multiselectable="true"{% endif %}>
+  {% for item in items %}
+   <!-- Use the accurate heading level to maintain the document outline -->
+  <h2 class="usa-accordion__heading">
+  <!-- id attribute is added to the button, to select/add JS that closes accordion on mobile widths -->
+    <button id="b-{{ id_prefix }}" class="usa-accordion__button"
+      aria-expanded="{{ item.expanded | default('false') }}"
+      aria-controls="{{ id_prefix }}{{ loop.index }}">
+      {{ title }}
+    </button>
+  </h2>
+  <!-- hidden attribute is added to the div to avoid flickering -->
+  <div id="{{ id_prefix }}{{ loop.index }}" class="usa-accordion__content usa-prose" hidden>
+    {{ item.content}}
+  </div>
+  {% endfor %}
+</div>
+
