@@ -2,7 +2,7 @@ type: theme
 base theme: uswds_base
 
 name: 'Prudentia Sub-Theme'
-description: 'Uses the USWDS Base and requires download of the USWDS assets'
+description: 'Uses the USWDS Base and requires download of the USWDS assets.  Here.'
 package: 'USWDS Base'
 core: 8.x
 core_version_requirement: ^8 
